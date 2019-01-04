@@ -1,0 +1,117 @@
+<!doctype html> 
+<html> 
+<head> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="mengkun">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <title>万能收款码</title>
+    <script>
+    var setting = {
+        aliUrl: "HTTPS://QR.ALIPAY.COM/FKX01256OXTWIBALPPVQD4"
+    }
+    </script>
+    <style>
+    * {
+        margin: 0; padding: 0;
+        font-family: Microsoft yahei;
+    }
+    body {
+        background-color: #fff;
+    }
+    .code-item {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        padding-bottom: 1px;
+        display: none;
+        background-color: #5c92ef;
+    }
+    .code-title {
+        height: 100px;
+        background-color: #f2f2f2;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 50%;
+    }
+    .code-area {
+        text-align: center;
+    }
+    .code-area>img {
+        margin: 80px 0;
+        width: 60%;
+        min-width: 100px;
+    }
+    .code-footer {
+        height: 80px;
+        text-align: center;
+        background-color: #fff;
+        color: #666;
+        line-height: 80px;
+        font-size: 20px;
+        margin: -2px 2px 2px 2px;
+    }
+    #code-all>.code-title {
+        background-image: url("./all.png");
+    }
+    #code-qq {
+        background-color: #54b4ef;
+    }
+    #code-qq>.code-title {
+        background-image: url("./qq.png");
+    }
+    #code-wechat {
+        background-color: #54bc6e;
+    }
+    #code-wechat>.code-title { 
+        background-image: url("./wx.png");
+    }
+    </style>    
+</head>
+<body>
+    <!-- http://sk.gtxcn.com -->
+    <div class="code-item" id="code-all">
+        <div class="code-title"></div>
+        <div class="code-area">
+            <img id="page-url" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPMAAADzCAMAAABkKNANAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF////AAAAVcLTfgAAAfZJREFUeNrs2kGSwjAMBMDs/z/NA/YSSRPHhp4zBHW4qDy+LhEREZGd8jfL/+fc+Yk734pPyMzMzMzMzHyEubfJ3Jms95n4hMzMzMzMzMxnmYdbV2l/Ks0Tm5CZmZmZmZn5J82l06IVEzIzMzMzMzN/rzm1dTEzMzMzMzMzR/qq3kLWbJ426eiYmZmZmZmZc+Zeej1Tqp3qLX/MzMzMzMzMG5pTGZ7gLJ2VmZmZmZmZeT9zr14aTt97zvDJzMzMzMzMzDubU9XR8OpMqu5iZmZmZmZmPt3c25aGQw9nLU3IzMzMzMzMfIQ51Rj19rne+52WW8zMzMzMzMzbmON7T6rKSq1ozMzMzMzMzEeYS8LhQKlbNQ9uk8zMzMzMzMwvmUvXZ4fC4VXdWF/FzMzMzMzMvJ95QZmUOlG6ngszMzMzMzPz2+aUZ7g/9dKsqZiZmZmZmZn3Mz+32zx3plP6e5iZmZmZmZmPMMc3oeFu1FsHaz/KzMzMzMzMvLE51WmVzoZ67VRvw2NmZmZmZmY+y1y6+9I7LerdvBleymFmZmZmZmb+KXPqgsvwvcQezczMzMzMzHyUudczxQuwpXsYMzMzMzMz81F91fBIqNdpxS71MDMzMzMzM681ryiKbny4tKI1z6GYmZmZmZmZ9zOLiIiIvJePAAMA1rxmhQAS4+MAAAAASUVORK5CYII=">
+        </div>
+        <div class="code-footer">扫描以上二维码向我付款</div>
+    </div>
+    <!-- https://i.qianbao.qq.com/wallet/sqrcode.htm?m=tenpay&f=wallet&a=1&ac=116C12D542554B92EFB8C16F7EDEF5F807E54D2D357A6D27DA04F1C8F40F9B86&u=785777793&n=WGzeyu -->
+    <div class="code-item" id="code-qq">
+        <div class="code-title"></div>
+        <div class="code-area">
+            <img id="qq-url" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOsAAADrCAMAAAC/1JHnAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF////AAAAVcLTfgAAA3ZJREFUeNrs2ltu4zAQBVFn/5vOfyBSdZuMzbZKXxnYI+kwQKdfr5eXl5fXqdfP/TX88p8Phv+8euTVT/nto7fXqlVrNyt9ravbzB8ydw2/MjzZ4qFq1aq1r5Xe+ibYXXx5+FrgJMBx0LfXqlXrF1pB6la8CzgncIBatWp9pnVeTIJ3o+Uxjf9atWp9iHW5fs3jddR5IxXq22p1rVq1vsMKAuXBP22fcWjVqvXz1uLCASgrQfJIBwd5AbxzuUKrVq0fsNIngcfR2hKUrvSIsqxSq1atzaw0eIK8LJ8/0lhf7ORp1aq1pTXK82i3C0TVKCLTg8Glq1atWvtYo9FjtPiVPxKcRD4k0KpVazdrHjzzrYZiXKe/BgzWqlVrH2veLo/qTbraQMcFdDRQ/eujVavWz1vppiatMsEgkY4B5iMEEJazHFSrVq3HWSNmcUpIY2m0L5FNLbRq1drRGiV2UYDO97HoV7KMVKtWrV9g3R2Hi206+ikpgLVq1drMCmraPEoXIaDwBAc9jsNatWptYaXtfToRpBMGuiYKGmcZU6tWrS2sUb6VzxWLhmJSSP7maNWqtZkVLCqAKSaNjDkuD8bjWl2rVq2nW+fvtrIWEc0Q6UQhej+8IKJVq9bjrPM7REsO0YCQ5qHREsbN97Rq1drHSptkIMhGd1lJRov1tVatWrtZs0OBE4Di6kUUlulfDK1atXaz0v47TQ9pzgkKYHpidHapVavWRtaowRbtY0U5J33VfKKgVavWltZi34tGy2gpC7fGYFJ4kyNq1ar1YCvNsvIFLDBXzFPQ4t8JrVq1drOCx9HACw4GNPHyIWShF6hVq9YWVhqC6USQksAN8nh9U79q1aq1hTWKmyBG0velCxfRB7jBplWr1tOtNNjlYTRKQYv7EtE+h1atWhtZi633fJOKbqtGgRyvcWnVqrWjFcS+qI9W7LJt3DPFiaJWrVrPtNKgSM+NdsqKySPd59CqVWtz68rscv4kGi1B5UmbadHkQatWrSdb94wZo5WtjcVp9ovUqlVrM2sUD/P9ro2DA5q5jst0rVq1NrPSZ+Yf7M4qq6WrVq1an2GlGxbz/0tfP4rhWrVqfZJ1ZSIIAnQevqMMV6tWrS2t/9ftB33/5YEjXuPSqlVrH2sU8egEIFqaAI24le6eVq1au1m9vLy8zrp+BRgA7IlmWb1uoGIAAAAASUVORK5CYII=">
+        </div>
+        <div class="code-footer">长按识别以上二维码向我付款</div>
+    </div>
+    <!-- wxp://f2f05KoAW0vUgK6me-Q_cPi_WDsjQPRSxPhY -->
+    <div class="code-item" id="code-wechat">
+        <div class="code-title"></div>
+        <div class="code-area">
+            <img id="wechat-url" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAD4CAMAAAD2D9s5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF////AAAAVcLTfgAAAj9JREFUeNrs2kGWAjEIBcCe+196TtDP8KHVxGKnMy2puJAHXJcQQgghto+/MF49f/f3u/x3r6fPCw4ODg4OfiK8+ru/Ck/zrV5U+jng4ODg4OAnwlcLktXn00IkzbdcEIGDg4ODg4Nf1YTdQgccHBwcHBz8gQ9qNhbSCwEHBwcHBwfvDxRWC5Xp5z8+SQEHBwcHB/8CeHfB792vv2azERwcHBwc/IPwqegOAD52cHBwcHBw8I3hrxKkB+n+39RgYblyAwcHBwcH3xA+1cjvPjcNBAcHBwcH/yV4d2D/VGE0vfAHDg4ODg5+Erw6iO/26VcvYPpiwcHBwcHBT4ZXE1UX/qoNijFg9xsCBwcHBwffCF5tEKQLANULfLyAAQcHBwcH3xC+2sCPC4UwTzp4SAslcHBwcHDwHeFpAZNCuvnHBhvg4ODg4OAHwKuFwGqB0T1gOrioXjw4ODg4OPjO8G7jvtoISAuU9H1wcHBwcPCT4dUCIx0EdC+0W2CBg4ODg4P/ArzbgKgWRunBx75ZcHBwcHDwjeFTCwBpIdNdGIgLF3BwcHBw8APg3egmqF5k9aIfuwBwcHBwcPAvgHcLhfQiphoO6eIfODg4ODj4SfCpgUN6kLSBUV38AwcHBwcHPxn+bkh18WCsoAIHBwcHBwe/VgHVfE8vCIKDg4ODg4O/blikC3ndBsTyYgA4ODg4OPhB8O5AoQvpxvJAAhwcHBwc/CD4UwnigzULleXFAHBwcHBw8I3hQgghhNgu/gUYAFmdaUHtEH6uAAAAAElFTkSuQmCC">
+        </div>
+        <div class="code-footer">长按识别以上二维码向我付款</div>
+    </div>
+    <script>
+    if(navigator.userAgent.match(/Alipay/i)) {
+        /* 支付宝 */ 
+        window.location.href = setting.aliUrl; 
+    } else if(navigator.userAgent.match(/MicroMessenger\//i)) {
+        /* 微信 */ 
+        document.getElementById("code-wechat").style.display = "block";
+    } else if(navigator.userAgent.match(/QQ\//i)) {
+        /* QQ */ 
+        document.getElementById("code-qq").style.display = "block";
+    } else {
+        /* 其它，显示“万能码” */ 
+        document.getElementById("code-all").style.display = "block";
+    }
+    function urlEncode(String) {
+        return encodeURIComponent(String).replace(/'/g,"%27").replace(/"/g,"%22");	
+    }
+    </script>
+</body>
+</html>
